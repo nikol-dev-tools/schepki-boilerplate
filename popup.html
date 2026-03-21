@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXTENSION_NAME</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- ===== MAIN CONTENT (replace this block for each extension) ===== -->
+  <div class="container">
+    <h1 class="title">EXTENSION_NAME</h1>
+    <p class="subtitle">EXTENSION_TAGLINE</p>
+
+    <!-- YOUR EXTENSION UI GOES HERE -->
+    <div id="main-content">
+      <!-- e.g. timer, buttons, etc. -->
+    </div>
+  </div>
+  <!-- ===== END MAIN CONTENT ===== -->
+
+  <!-- ===== DONATION BANNER (controlled by Remote Config) ===== -->
+  <div id="donation-banner" class="donation-banner" style="display:none;">
+    <span id="donation-text">Support the developer ☕</span>
+    <a id="donation-link" href="#" target="_blank" class="donation-btn">Donate</a>
+  </div>
+
+  <!-- ===== CROSS-PROMO BANNER (controlled by Remote Config) ===== -->
+  <div id="promo-banner" class="promo-banner" style="display:none;">
+    <span id="promo-text"></span>
+    <a id="promo-link" href="#" target="_blank">Try it →</a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <a id="privacy-link" href="#" target="_blank">Privacy Policy</a>
+  </div>
+
+  <script src="remote-config.js"></script>
+  <script src="analytics.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

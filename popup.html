@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXTENSION_NAME</title>
-  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-
-  <!-- ===== MAIN CONTENT (replace this block for each extension) ===== -->
-  <div class="container">
-    <h1 class="title">EXTENSION_NAME</h1>
-    <p class="subtitle">EXTENSION_TAGLINE</p>
-
-    <!-- YOUR EXTENSION UI GOES HERE -->
-    <div id="main-content">
-      <!-- e.g. timer, buttons, etc. -->
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">
+      <img src="icons/icon48.png" alt="icon" width="24" height="24">
+      <span class="title" data-i18n="title">EXTENSION_NAME</span>
     </div>
   </div>
-  <!-- ===== END MAIN CONTENT ===== -->
 
-  <!-- ===== DONATION BANNER (controlled by Remote Config) ===== -->
-  <div id="donation-banner" class="donation-banner" style="display:none;">
-    <span id="donation-text">Support the developer ☕</span>
-    <a id="donation-link" href="#" target="_blank" class="donation-btn">Donate</a>
+  <!-- MAIN CONTENT — replace this section with your extension's UI -->
+  <div class="main-content">
+    <p data-i18n="description">Your extension description here.</p>
+
+    <!-- STEP 3: YOUR EXTENSION UI HERE -->
+    <!-- Example: button, input, toggle, etc. -->
+    <button id="main-action" class="btn-primary" data-i18n="action_button">
+      Do Something
+    </button>
   </div>
 
-  <!-- ===== CROSS-PROMO BANNER (controlled by Remote Config) ===== -->
-  <div id="promo-banner" class="promo-banner" style="display:none;">
-    <span id="promo-text"></span>
-    <a id="promo-link" href="#" target="_blank">Try it →</a>
+  <!-- DONATE BANNER (shown after 3rd open, hidden initially) -->
+  <div id="donate-banner" class="donate-banner hidden">
+    <span data-i18n="donate_text">☕ Enjoying this? Buy me a coffee!</span>
+    <a id="donate-link" href="#" target="_blank" class="donate-btn" data-i18n="donate_button">Donate</a>
   </div>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- RATE US PROMPT (shown after N opens, hidden initially) -->
+  <div id="rate-us-banner" class="rate-banner hidden">
+    <span data-i18n="rate_text">⭐ Loving it? Leave a review!</span>
+    <a id="rate-link" href="#" target="_blank" class="rate-btn" data-i18n="rate_button">Rate Us</a>
+    <button id="rate-dismiss" class="dismiss-btn" data-i18n="rate_dismiss">Maybe later</button>
+  </div>
+
+  <!-- FOOTER -->
   <div class="footer">
-    <a id="privacy-link" href="#" target="_blank">Privacy Policy</a>
+    <a href="https://nikol-dev-tools.github.io/schepki-config/privacy.html" target="_blank" data-i18n="privacy">Privacy Policy</a>
   </div>
 
-  <script src="remote-config.js"></script>
-  <script src="analytics.js"></script>
-  <script src="popup.js"></script>
+  <script type="module" src="popup.js"></script>
 </body>
 </html>
